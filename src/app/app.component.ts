@@ -1,4 +1,4 @@
-import {IdleMonitorService} from '@scullyio/ng-lib'; 
+import {IdleMonitorService, ScullyRoutesService} from '@scullyio/ng-lib';
  import { Component } from '@angular/core';
 
 @Component({
@@ -6,8 +6,8 @@ import {IdleMonitorService} from '@scullyio/ng-lib';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent { 
- constructor (private idle: IdleMonitorService) { } 
+export class AppComponent {
+  constructor(private idle: IdleMonitorService, public scully: ScullyRoutesService) { }
 
-  title = 'scully-demo';
+  title = 'Hello Scully!';
 }
