@@ -1,5 +1,6 @@
-<div style="border: 1px solid #000">
-  <div>this component is BlogComponent</div>
+<mat-card>
+  <mat-card-title>this component is BlogComponent</mat-card-title>
+  <!--
   <div>Article List</div>
 
   <ng-container *ngFor="let route of scully.available$ | async">
@@ -9,11 +10,13 @@
       </li>
     </ng-container>
   </ng-container>
-  <h3>ScullyIo content</h3>
+  -->
+  <div>ScullyIo content</div>
+  <mat-divider></mat-divider>
   <!-- This is where Scully will inject the static HTML -->
-  <div style="border: 1px solid #000">
+  <mat-card-content>
     <scully-content></scully-content>
-  </div>
-  <h4>End of content</h4>
-</div>
-
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <div>End of content</div>
+</mat-card>

@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router, ROUTES} from '@angular/router';
-import {ScullyRoutesService} from '@scullyio/ng-lib';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router, ROUTES } from '@angular/router';
+import { ScullyRoutesService } from '@scullyio/ng-lib';
 
 declare var ng: any;
 
@@ -10,12 +10,15 @@ declare var ng: any;
   styleUrls: ['./blog.component.css'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated
-
 })
 export class BlogComponent implements OnInit {
   ngOnInit() {}
 
-  constructor(private router: Router, private route: ActivatedRoute, public scully: ScullyRoutesService) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public scully: ScullyRoutesService
+  ) {
     console.log('blog');
     this.scully.available$.subscribe(r => {
       console.log(r);

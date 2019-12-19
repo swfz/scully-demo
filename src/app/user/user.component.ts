@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {pluck} from 'rxjs/operators';
-import {ScullyRoutesService} from '@scullyio/ng-lib';
+import { ActivatedRoute } from '@angular/router';
+import { pluck } from 'rxjs/operators';
+import { ScullyRoutesService } from '@scullyio/ng-lib';
 
 @Component({
   selector: 'app-user',
@@ -9,13 +9,11 @@ import {ScullyRoutesService} from '@scullyio/ng-lib';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
+  userId$ = this.route.params.pipe(pluck('userId'));
+  constructor(
+    private route: ActivatedRoute,
+    public scully: ScullyRoutesService
+  ) {}
 
-  userId$ = this.route.params.pipe(
-    pluck('userId')
-  );
-  constructor(private route: ActivatedRoute, public scully: ScullyRoutesService ) { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
