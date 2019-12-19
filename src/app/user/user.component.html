@@ -1,1 +1,14 @@
-<p>UserID: {{ userId$ | async }}</p>
+<div style="border: 1px solid #000">
+  <div>this component is UserComponent</div>
+  <div>User List</div>
+
+  <ng-container *ngFor="let route of scully.available$ | async">
+    <ng-container *ngIf="route.route.includes('users')">
+      <li>
+        <a [routerLink]="route.route">{{route.title || route.route}}</a>
+      </li>
+    </ng-container>
+  </ng-container>
+
+  <p>UserID: {{ userId$ | async }}</p>
+</div>

@@ -7,7 +7,7 @@ import {IdleMonitorService, ScullyRoutesService} from '@scullyio/ng-lib';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private idle: IdleMonitorService, public scully: ScullyRoutesService) { }
+  constructor(private idle: IdleMonitorService) { }
 
   title = 'Hello Scully!';
 }
